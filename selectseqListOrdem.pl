@@ -6,6 +6,7 @@
 use strict;
 use warnings;
 use autodie; # die if problem reading or writing a file
+use Statistics::R;
 my @list=("Serg","Tbru","Lmajor");
 
 foreach $i (@list){
@@ -32,3 +33,13 @@ while(<FILE1>){
 }
 
 
+
+
+my @numbers = ( 1 .. 10 );
+
+my $R = Statistics::R->new();
+$R->set( 'x', \@numbers );
+$R->run( q`x = x ^ 2` );
+my $squares = $R->get('x');
+
+print "@$squares";
