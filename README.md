@@ -25,3 +25,10 @@ usage: OrthoMCLtoVennDiagramm.py groups singletons families
     
     families    -Path to list file detailing groups of species/families
    
+ Install cpanm to make installing other modules easier (you'll thank us later). You need to type these commands into a Terminal emulator (Mac OS X, Win32, Linux)
+
+cpan App::cpanminus
+
+Now install any module you can find.
+
+cpanm Module::Statistics::R module
